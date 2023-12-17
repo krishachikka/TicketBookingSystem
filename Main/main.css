@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,700,900");
+
+*{
+    font-family:'Poppins', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+}
+
+/* Header and footer */
+header{
+    background-color: #220901;
+    font-weight: 300;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+footer {
+    background-color: #220901;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 43px;
+}
+.header-container, .footer-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Main content */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.container h2 {
+    margin-bottom: 1rem;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+input[type="text"], select, input[type="number"], button {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus, select:focus, input[type="number"]:focus {
+    border-color: #621708;
+    outline: none;
+}
+
+button.primary-button {
+    background-color: #F6AA1C;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    box-shadow: 1px 5px 8px 2px #48422d;
+    transition: 0.3s all ease-in-out;
+    transition: 0.5s box-shadow ease-in-out;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button.primary-button:hover {
+    background-color: #bc6e08;
+    transform: scale(1.05);
+}
+
+/* Main content */
+.container {
+    max-width: 800px;
+    margin: 0; /* Remove auto margin */
+    padding: 2rem;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+    display: flex; /* Use flex display */
+    justify-content: flex-start; /* Align content to the left */
+    flex-direction: column; /* Stack elements vertically */
+}
+
+.container h2 {
+    margin-bottom: 1rem;
+    text-align: center; /* Center the text */
+}
+
+/* Form styling */
+form {
+    margin: auto; /* Center-align the form content */
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Expand to full width */
+}
+
+/* Style for input fields */
+.input-field {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #f4f4f4;
+    border-radius: 4px;
+    transition: border-color 0.3s, background-color 0.3s;
+    width: 100%;
+}
+
+/* Style for input fields on focus */
+.input-field:focus {
+    border-color: #621708;
+    outline: none;
+    background-color: #fff;
+}
+
+/* Modal popup */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 50%;
+    text-align: center;
+    position: relative;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Entered Details styling */
+.entered-details {
+    background-color: #f4f4f4;
+    padding: 1rem;
+    border-radius: 20px;
+    width: 45%; /* Adjust the width as needed */
+    position: absolute;
+    top: 100px; /* Adjust the top value based on your layout */
+    right: 10px; /* Position on the right */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.entered-details h3 {
+    margin-bottom: 0.5rem;
+}
+
+
+.entered-details-item {
+    background-color: #f4f4f4;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+    box-shadow: 0 5px 5px rgb(47, 46, 46);
+}
+
+/* Positioning and styling for the entered details */
+.entered-details-container {
+    background-color: #4a3610;
+    padding: 1rem;
+    border-radius: 20px;
+    width: 45%;
+    position: absolute;
+    top: 100px; /* Adjust as needed */
+    right: 10px;
+    box-shadow: 0 2px 5px rgb(32, 32, 32);
+}
+
+.entered-details-container h3 {
+    margin-bottom: 0.5rem;
+}
+
+/* Apply a maximum height and scrolling to the entered details container */
+.entered-details-container {
+    max-height: 700px; /* Adjust the maximum height as needed */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+
+
+#yash{
+    display: flex;
+    align-items: left;
+    margin-bottom: -50px;
+    margin-left: 10px;
+    text-decoration: none;
+    text-underline-offset: none;
+    background: #fcce03;
+    box-shadow: 0 0 2px 2px#f8d799;
+}
+
+#yash:hover{
+    background-color: #bc6e08;
+    color: #f4f4f4;
+    transform: scale(1.05);
+}
+
+#yash a{
+    text-decoration: none;
+}
+
+#show-demo-bill-button {
+    margin-top: 20px;
+        background-color: #5e0303;
+        color: #fff;
+        cursor: pointer;
+        border: none;
+        border-radius: 15px;
+        padding: 10px 20px;
+        font-size: 16px;
+        box-shadow: 1px 5px 8px 2px #48422d;
+        transition: 0.3s all ease-in-out;
+        transition: 0.5s box-shadow ease-in-out;
+        transition: background-color 0.3s, transform 0.2s;
+}
+
+#show-demo-bill-button:hover {
+    background-color: #9a3e05;
+        transform: scale(1.05);
+    
+}

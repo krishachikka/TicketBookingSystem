@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Booking System</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <button id="yash"><a href="/ticket_booking_system/New/new.html">New Booking</a></button>
+        <div class="header-container">
+            <h1>Ticket Booking System</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2>Book Your Tickets</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required>
+
+            <label for="event">Select Event:</label>
+            <select id="event" name="event">
+                <option value="movie">Movie</option>
+                <option value="Bahubali">Bahubali</option>
+                <option value="Bajrangi Bhaijaan">Bajrangi Bhaijaan</option>
+                <option value="Krrish">Krrish</option>
+                <option value="Tanhaji">Tanhaji</option>
+                <option value="Robot 2.O">Robot 2.O</option>
+            </select>
+
+            <label for="tickets">Number of Tickets:</label>
+            <input type="number" id="tickets" name="tickets" min="1" required><br>
+
+            <button type="submit" class="primary-button">Book Now</button>
+            <button type="button" class="demo-button" id="show-demo-bill-button">Show Demo Bill</button>
+        </form>
+    </main>
+
+    <!-- Modal Popup -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <p id="booking-success-message"><ion-icon name="happy"></ion-icon> Booking Successful!</p>
+        </div>
+    </div>
+
+    <!-- Entered Details Container -->
+    <div class="entered-details-container" id="entered-details-container">
+        <!-- Entered details will be dynamically added here -->
+    </div>
+
+    <div id="demo-bill-modal" class="modal">
+        <div class="modal-content">
+            <span class="demo-bill-close-button">&times;</span>
+            <div id="demo-bill-content">
+                <!-- Demo bill content goes here -->
+            </div>
+        </div>
+    </div>
+    
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2023 Ticket Booking System. All rights reserved.</p>
+        </div>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

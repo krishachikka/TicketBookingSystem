@@ -1,0 +1,329 @@
+/* Add custom fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+/* Global Styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #222;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    perspective: 1000px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Movie Selection Styles */
+.movie-con {
+    margin-bottom: 20px;
+}
+
+.movie-con label {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.movie-con select {
+    background-color: #333;
+    border: 0;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 5px 15px;
+    color: white;
+}
+
+/* Seat Styles */
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.seat {
+    background-color: #333;
+    height: 15px;
+    width: 20px;
+    margin: 3px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.seat.selected {
+    background-color: #00cc66;
+    cursor: pointer;
+    padding-left: 30px;
+    
+}
+
+.seat.sold {
+    background-color: #ff3333;
+}
+
+.screen {
+    background-color: #555;
+    height: 20px;
+    width: 100%;
+    margin: 15px 0;
+    transform: rotateX(-45deg);
+    box-shadow: 0 3px 10px rgba(246, 224, 151, 0.5);
+}
+
+/* Showcase Styles */
+.showcase {
+    background-color: #444;
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.showcase li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 20px;
+}
+
+.showcase li small {
+    margin-left: 2px;
+}
+
+/* Text Styles */
+p.text {
+    margin: 5px 0;
+}
+
+p.text.small {
+    color: #00cc66;
+}
+
+
+
+
+
+
+/* ... Your existing CSS ... */
+
+.container {
+    perspective: 1000px;
+    margin: 0 auto; /* Center the container horizontally */
+    width: 90%; /* Adjust the width as needed */
+    max-width: 1200px; /* Limit the maximum width */
+}
+
+.screen {
+    background-color: whitesmoke;
+    height: 150px; /* Increase the height of the screen */
+    width: 100%; /* Ensure the screen spans the container width */
+    margin: 15px 0;
+    transform: rotateX(-45deg);
+    box-shadow: 0 3px 10px rgb(246, 224, 151);
+}
+
+/* ... Rest of your CSS ... */
+
+/* ... Your existing CSS ... */
+
+.row {
+    display: flex;
+    flex-wrap: wrap; /* Allow seats to wrap to the next line if needed */
+    justify-content: center; /* Center the seats horizontally */
+}
+
+.seat {
+    background-color: rgb(250, 249, 249);
+    height: 25px; /* Increase the height of the seats */
+    width: 30px; /* Increase the width of the seats */
+    margin: 5px; /* Add some margin between seats for spacing */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* ... Rest of your CSS ... */
+
+
+
+
+.section-counts {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    
+}
+
+.section-count {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+.circle.available {
+    background-color: #00cc66;
+}
+
+.circle.selected {
+    background-color: #333;
+}
+
+.circle.sold {
+    background-color: #ff3333;
+}
+
+.section-count span {
+    font-weight: bold;
+    font-size: 18px;
+    transition: transform 0.3s ease; /* Add transition for the seat count */
+}
+
+/* Scale the seat count when clicked */
+.row .seat:not(.sold):active + span {
+    transform: scale(1.3);
+}
+
+
+
+/* Movie Selection Styles with Transitions */
+.movie-con {
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.movie-con:hover {
+    transform: scale(1.05); /* Add a scale transition on hover */
+}
+
+.movie-con label {
+    font-size: 20px;
+    margin-right: 10px;
+    transition: color 0.3s ease; /* Add a color transition */
+}
+
+.movie-con select {
+    background-color: #333;
+    border: 0;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 5px 15px;
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Add transitions for background color and text color */
+}
+
+.movie-con select:hover {
+    background-color: #444; /* Change background color on hover */
+    color: white; /* Change text color on hover */
+}
+
+
+/* Your existing CSS */
+
+/* Add this CSS for tooltips */
+.section-count .circle::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%; /* Position above the circle */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.2s;
+    pointer-events: none; /* Ensure it doesn't interfere with hover events */
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.section-count .circle:hover::before {
+    opacity: 1;
+}
+
+
+
+
+
+/* ... Your existing CSS ... */
+
+.section-counts {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.section-count {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+    margin: 0 10px; /* Add margin to create space between circles */
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+/* ... Rest of your CSS ... */
+
+
+
+
+ submit button container */
+.submit-button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Style the submit button */
+.submit-button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.submit-button:focus {
+    outline: none;
+}
+
+
+
